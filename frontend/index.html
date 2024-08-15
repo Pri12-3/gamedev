@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHESSNERDS</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/team.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
+</head>
+
+<body>
+    <section class="animation">
+        <div class="pattern">
+            <div class="face face1"></div>
+            <div class="face face2"></div>
+        </div>
+    </section>
+
+    <div class="container">
+        <header>
+            <div class="navbar">
+                <div class="logo"><a href="#">CHESSMATE</a></div>
+                <ul class="links">
+                    <li><a href="index.html" style="font-size: 1.4rem; font-weight: 700;">Home</a></li>
+                    <li><a href="login.html" style="font-size: 1.4rem; font-weight: 700;">Login</a></li>
+                    <li><a href="register.html" style="font-size: 1.4rem; font-weight: 700;">Register</a></li>
+                    <li><a href="game.html" style="font-size: 1.4rem; font-weight: 700;">Play Game!!!</a></li>
+                </ul>
+                <div class="toggleBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <div class="dropdownMenu open">
+                <li><a href="index.html" style="font-size: 1rem; font-weight: 700;">Home</a></li>
+                <li><a href="login.html" style="font-size: 1rem; font-weight: 700;">Login</a></li>
+                <li><a href="register.html" style="font-size: 1rem; font-weight: 700;">Register</a></li>
+                <li><a href="game.html" style="font-size: 1rem; font-weight: 700;">Play Game!!</a> </li>
+            </div>
+        </header>
+        <div class="main">
+            <div class="content">
+                <h1>IMPROVE YOUR CHESS KNOWLEDGE</h1>
+                <p>Connect with top ranked chess players from around the world and learn the secrets of becoming a chess
+                    master</p>
+                <a href="leaderboard.html"><button style="font-family: montserrat;">Leader Board</button></a>
+            </div>
+            <div class="image">
+                <img src="./assets/cover_img.jpeg" alt="ERROR">
+            </div>
+        </div>
+    </div>
+
+   
+    <script>
+        const toggle_Btn = document.querySelector(".toggleBtn")
+        const toggleBtnIcon = document.querySelector(".toggleBtn i")
+        const dropdown_Menu = document.querySelector(".dropdownMenu")
+
+        toggle_Btn.onclick = function () {
+            dropdown_Menu.classList.toggle("open")
+            const isOpen = dropdown_Menu.classList.contains("open")
+
+            toggleBtnIcon.classList = isOpen
+                ? "fa-solid fa-xmark"
+                : "fa-solid fa-bars"
+        }
+    </script>
+</body>
+
+</html>
